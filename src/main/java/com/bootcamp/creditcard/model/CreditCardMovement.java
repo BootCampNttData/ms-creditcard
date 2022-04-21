@@ -14,7 +14,7 @@ public class CreditCardMovement {
     private String id;
     private Integer creditCardNumber;
     private String movementType;
-    private Date movementDate;
+    private String movementDate;
     private Double amount;
     private Double creditLimit;
 }

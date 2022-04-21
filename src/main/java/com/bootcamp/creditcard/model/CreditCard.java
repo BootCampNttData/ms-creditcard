@@ -14,7 +14,7 @@ public class CreditCard {
     private String id;
     private Integer creditCardNumber;
     private String clientId;
-    private Date expeditionDate;
-    private Date expirationDate;
+    private String expeditionDate;
+    private String expirationDate;
     private Double creditLimit;
 }
