@@ -44,4 +44,9 @@ public class CreditCardServiceImpl implements CreditCardService {
     public Flux<CreditCard> findByCreditCardNumber(String id) {
         return repository.findByCreditCardNumber(id);
     }
+
+    @Override
+    public Flux<CreditCard> findByClientId(String id) {
+        return repository.findByClientId( id);
+    }
 }

@@ -12,7 +12,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/creditCard")
+@RequestMapping("/creditcard")
 @RequiredArgsConstructor
 public class CreditCardController {
     public final CreditCardService service;
@@ -25,6 +25,20 @@ public class CreditCardController {
     @GetMapping("/find/{num}")
     public Flux<CreditCard> getByIdCreditCard(@PathVariable("num") String num){
         return service.findByCreditCardNumber(num);
+    }
+
+    /**
+     * Obtiene una lista de las Tarjetas de Credito que posea el Cliente segun su Documento
+     * @param clientId Documento del Cliente (RUC)
+     * @return Lista con las Tarjetas de Credito pertenecientes al Documento
+     */
+    @GetMapping("/findCreditCardByClientRuc/{clientRuc}")
+    public Flux<Integer> findAcountsByClientId(@PathVariable("clientId") String clientId) {
+        var accounts = service.findByClientId(clientId);
+        var lst = accounts.map(acc -> {
+            return acc.getCreditCardNumber();
+        });
+        return lst;
     }
 
     @PostMapping

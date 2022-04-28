@@ -9,6 +9,7 @@ public interface CreditCardService {
     Flux<CreditCard> findAll();
     Mono<CreditCard> create(CreditCard creditCard);
     Flux<CreditCard> findByCreditCardNumber(String num);
+    Flux<CreditCard> findByClientId(String id);
     Mono<CreditCard> update(CreditCard creditCard);
     Mono<CreditCard> deleteById(String id);
     Mono delete(CreditCard creditCard);

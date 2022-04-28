@@ -6,4 +6,5 @@ import reactor.core.publisher.Flux;
 
 public interface CreditCardRepository extends ReactiveCrudRepository<CreditCard, String> {
     Flux<CreditCard> findByCreditCardNumber(String num);
+    Flux<CreditCard> findByClientId(String clientId) ;
 }
