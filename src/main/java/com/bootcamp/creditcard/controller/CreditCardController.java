@@ -32,7 +32,7 @@ public class CreditCardController {
      * @param clientId Documento del Cliente (RUC)
      * @return Lista con las Tarjetas de Credito pertenecientes al Documento
      */
-    @GetMapping("/findCreditCardByClientRuc/{clientRuc}")
+    @GetMapping("/findCreditCardByClientId/{clientId}")
     public Flux<Integer> findAcountsByClientId(@PathVariable("clientId") String clientId) {
         var accounts = service.findByClientId(clientId);
         var lst = accounts.map(acc -> {
