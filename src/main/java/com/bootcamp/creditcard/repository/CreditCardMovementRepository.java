@@ -5,5 +5,5 @@ import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Flux;
 
 public interface CreditCardMovementRepository extends ReactiveCrudRepository<CreditCardMovement, String> {
-    Flux<CreditCardMovement> findByCreditCardNumber(Integer num);
+    Flux<CreditCardMovement> findByCreditCardNumber(String num);
 }

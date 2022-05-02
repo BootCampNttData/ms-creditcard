@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 public interface CreditCardMovementService {
     Flux<CreditCardMovement> findAll();
     Mono<CreditCardMovement> create(CreditCardMovement creditCardMovement);
-    Flux<CreditCardMovement> findByCreditCardNumber(Integer num);
+    Flux<CreditCardMovement> findByCreditCardNumber(String num);
     Mono<CreditCardMovement> update(CreditCardMovement creditCardMovement);
     Mono<CreditCardMovement> deleteById(String id);
     Mono delete(CreditCardMovement creditCardMovement);

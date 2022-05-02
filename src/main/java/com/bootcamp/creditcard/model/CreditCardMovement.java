@@ -12,9 +12,10 @@ import java.util.Date;
 public class CreditCardMovement {
     @Id
     private String id;
-    private Integer creditCardNumber;
-    private String movementType;
+    private String creditCardNumber;
+    private String movementType; /** [P]Pago | [C]Compra */
     private String movementDate;
     private Double amount;
     private Double creditLimit;
+
 }

@@ -11,10 +11,11 @@ import java.util.Date;
 
 public class CreditCard {
     @Id
-    private String id;
-    private Integer creditCardNumber;
-    private String clientId;
-    private String expeditionDate;
-    private String expirationDate;
-    private Double creditLimit;
+    private String  id;
+    private String  creditCardNumber;
+    private String  clientId;
+    private String  expeditionDate;
+    private String  expirationDate;
+    private Double  creditLimit;
+    private Integer paymentDay;
 }

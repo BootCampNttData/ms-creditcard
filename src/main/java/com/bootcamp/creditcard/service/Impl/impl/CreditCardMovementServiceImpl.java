@@ -41,7 +41,7 @@ public class CreditCardMovementServiceImpl implements CreditCardMovementService 
     }
 
     @Override
-    public Flux<CreditCardMovement> findByCreditCardNumber(Integer num) {
+    public Flux<CreditCardMovement> findByCreditCardNumber(String num) {
         return repository.findByCreditCardNumber(num);
     }
 

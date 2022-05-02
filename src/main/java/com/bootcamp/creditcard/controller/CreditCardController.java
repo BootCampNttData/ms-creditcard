@@ -33,7 +33,7 @@ public class CreditCardController {
      * @return Lista con las Tarjetas de Credito pertenecientes al Documento
      */
     @GetMapping("/findCreditCardByClientId/{clientId}")
-    public Flux<Integer> findAcountsByClientId(@PathVariable("clientId") String clientId) {
+    public Flux<String> findAcountsByClientId(@PathVariable("clientId") String clientId) {
         var accounts = service.findByClientId(clientId);
         var lst = accounts.map(acc -> {
             return acc.getCreditCardNumber();
@@ -68,7 +68,7 @@ public class CreditCardController {
     }
 
     @GetMapping("/movement/find/{num}")
-    public Flux<CreditCardMovement> getByIdCreditCard(@PathVariable("num") Integer num){
+    public Flux<CreditCardMovement> getMovementsByCreditCardNumber(@PathVariable("num") String num){
         return creditCardMovementService.findByCreditCardNumber(num);
     }
 
