@@ -1,9 +1,9 @@
-package com.bootcamp.creditcard.service.Impl.impl;
+package com.bootcamp.creditcard.service.Impl;
 
 
 import com.bootcamp.creditcard.model.CreditCardMovement;
 import com.bootcamp.creditcard.repository.CreditCardMovementRepository;
-import com.bootcamp.creditcard.service.Impl.CreditCardMovementService;
+import com.bootcamp.creditcard.service.CreditCardMovementService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;

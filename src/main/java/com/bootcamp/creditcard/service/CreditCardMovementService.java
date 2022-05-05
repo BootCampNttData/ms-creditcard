@@ -1,4 +1,4 @@
-package com.bootcamp.creditcard.service.Impl;
+package com.bootcamp.creditcard.service;
 
 import com.bootcamp.creditcard.model.CreditCardMovement;
 import reactor.core.publisher.Flux;
